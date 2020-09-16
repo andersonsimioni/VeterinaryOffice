@@ -1,0 +1,18 @@
+window_sizes 1920 1013 450 1464 827 128
+
+diagrams
+  active  classdiagram_ref 128251 // diagram
+    1464 827 110 A4 0 0
+  usecasediagram_ref 128123 // useCase
+    114 98 100 A4 0 0
+end
+show_stereotypes
+selected attribute_ref 132091 // Client
+open
+  usecaseview_ref 128123 // veterinaryOffice
+  class_ref 128507 // VeterinaryOffice
+  class_ref 128635 // Animal
+  class_ref 129019 // Treatment
+  class_ref 129147 // Exam
+end
+end

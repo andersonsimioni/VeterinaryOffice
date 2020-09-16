@@ -1,0 +1,45 @@
+format 222
+
+classcanvas 128251 class_ref 128123 // Veterinary
+  simpleclassdiagramsettings end
+  xyz 62.7 133.5 2000
+end
+subject 129275 ""
+  xyzwh 193 22 2000 450 447
+textcanvas 129403 "System (veterinary office)"
+  xyzwh 196 24 2005 167 15
+usecasecanvas 129531 usecase_ref 128379 // RegisterAnimal
+  xyzwh 370 45 3005 87 33 label_xy 357 75
+end
+usecasecanvas 129787 usecase_ref 128507 // RegisterClient
+  xyzwh 374 219 3005 87 33 label_xy 364 249
+end
+classcanvas 131835 class_ref 128379 // Client
+  simpleclassdiagramsettings end
+  xyz 661 175 2000
+end
+usecasecanvas 131963 usecase_ref 128635 // RegisterConsult
+  xyzwh 382 301 3005 87 33 label_xy 367 331
+end
+usecasecanvas 132347 usecase_ref 128763 // ExecuteConsult
+  xyzwh 382 405 3005 87 33 label_xy 367 435
+end
+usecasecanvas 132603 usecase_ref 128891 // RegisterSpecies
+  xyzwh 374 143 3005 83 35 label_xy 359 174
+end
+line 129659 ----
+  from ref 128251 z 3006 to ref 129531
+line 131707 ----
+  from ref 129787 z 3006 to ref 128251
+line 132091 ----
+  from ref 128251 z 3006 to ref 131963
+line 132219 ----
+  from ref 131963 z 3006 to ref 131835
+line 132475 ----
+  from ref 132347 z 3006 to ref 128251
+simplerelationcanvas 132731 simplerelation_ref 128123
+  from ref 129531 z 3006 stereotype "<<extend>>" xyz 378.5 109 3000 to ref 132603
+end
+line 132859 ----
+  from ref 128251 z 3006 to ref 132603
+end

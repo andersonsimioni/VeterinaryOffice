@@ -1,0 +1,112 @@
+format 222
+
+classcanvas 128123 class_ref 128507 // VeterinaryOffice
+  classdiagramsettings member_max_width 0 end
+  xyzwh 16.4 366 2000 125 209
+end
+classcanvas 128251 class_ref 128379 // Client
+  classdiagramsettings member_max_width 0 end
+  xyz 42.8 1.2 2000
+end
+classcanvas 128379 class_ref 128635 // Animal
+  classdiagramsettings member_max_width 0 end
+  xyzwh 669.3 457.1 2000 141 137
+end
+classcanvas 128507 class_ref 128763 // Species
+  classdiagramsettings member_max_width 0 end
+  xyzwh 614.9 230.9 2000 116 112
+end
+classcanvas 129275 class_ref 128891 // Consult
+  classdiagramsettings member_max_width 0 end
+  xyzwh 448.6 32 2000 111 107
+end
+classcanvas 129403 class_ref 129019 // Treatment
+  classdiagramsettings member_max_width 0 end
+  xyzwh 228 39.9 2000 116 193
+end
+classcanvas 129659 class_ref 129147 // Exam
+  classdiagramsettings member_max_width 0 end
+  xyzwh 685.2 37.3 2000 86 98
+end
+classcanvas 131067 class_ref 128123 // Veterinary
+  classdiagramsettings member_max_width 0 end
+  xyz 291.7 385.5 2000
+end
+relationcanvas 132475 relation_ref 130811 // <unidirectional association>
+  decenter_end 128
+  from ref 128507 z 2001 to ref 128379
+  role_a_pos 694 438 3000 no_role_b
+  multiplicity_a_pos 670 438 3000 no_multiplicity_b
+end
+relationcanvas 132603 relation_ref 130939 // <unidirectional association>
+  decenter_end 310
+  from ref 129275 z 2001 to ref 129403
+  role_a_pos 350 78 3000 no_role_b
+  multiplicity_a_pos 350 104 3000 multiplicity_b_pos 430 104 3000
+end
+relationcanvas 132731 relation_ref 131067 // <unidirectional association>
+  from ref 129659 z 2001 to ref 129275
+  role_a_pos 565 66 3000 no_role_b
+  multiplicity_a_pos 566 92 3000 multiplicity_b_pos 668 92 3000
+end
+relationcanvas 132859 relation_ref 131195 // <unidirectional association>
+  decenter_begin 791
+  decenter_end 959
+  from ref 128379 z 2001 to ref 128123
+  role_a_pos 147 545 3000 no_role_b
+  multiplicity_a_pos 148 571 3000 multiplicity_b_pos 652 571 3000
+end
+relationcanvas 132987 relation_ref 131323 // <unidirectional association>
+  decenter_begin 259
+  decenter_end 347
+  from ref 128251 z 2001 to ref 128123
+  role_a_pos 66 348 3000 no_role_b
+  multiplicity_a_pos 29 348 3000 multiplicity_b_pos 43 145 3000
+end
+relationcanvas 133115 relation_ref 131451 // <unidirectional association>
+  decenter_begin 476
+  decenter_end 455
+  from ref 131067 z 2001 to ref 128123
+  role_a_pos 148 441 3000 no_role_b
+  multiplicity_a_pos 148 468 3000 multiplicity_b_pos 274 468 3000
+end
+relationcanvas 133243 relation_ref 131579 // <unidirectional association>
+  decenter_begin 219
+  decenter_end 101
+  from ref 129403 z 2001 to point 250 385
+  line 134779 z 2001 to ref 128123
+  role_a_pos 147 369 3000 no_role_b
+  multiplicity_a_pos 148 395 3000 multiplicity_b_pos 235 237 3000
+end
+relationcanvas 133371 relation_ref 131707 // <unidirectional association>
+  decenter_begin 79
+  decenter_end 779
+  from ref 128251 z 2001 to point 777.5 13.6
+  line 134523 z 2001 to ref 128379
+  role_a_pos 788 438 3000 no_role_b
+  multiplicity_a_pos 762 438 3000 multiplicity_b_pos 117 22 3000
+end
+relationcanvas 133627 relation_ref 131835 // <unidirectional association>
+  decenter_begin 240
+  decenter_end 674
+  from ref 128379 z 2001 to point 505 488
+  line 135163 z 2001 to point 505 165
+  line 135291 z 2001 to ref 129403
+  role_a_pos 349 148 3000 no_role_b
+  multiplicity_a_pos 351 174 3000 multiplicity_b_pos 652 497 3000
+end
+relationcanvas 133755 relation_ref 131963 // <unidirectional association>
+  decenter_begin 497
+  decenter_end 880
+  from ref 131067 z 2001 to ref 129403
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134267 relation_ref 132091 // <unidirectional association>
+  decenter_begin 774
+  decenter_end 367
+  from ref 128251 z 2001 to ref 129403
+  role_a_pos 182 89 3000 no_role_b
+  multiplicity_a_pos 210 115 3000 multiplicity_b_pos 117 115 3000
+end
+end
