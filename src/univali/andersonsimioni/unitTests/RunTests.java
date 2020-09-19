@@ -11,4 +11,9 @@ public class RunTests {
         TestSpecie testSpecie = new TestSpecie();
         testSpecie.run();
     }
+
+    public static void testClient() {
+        TestClient testClient = new TestClient();
+        testClient.run();
+    }
 }
