@@ -6,4 +6,9 @@ public class RunTests {
         TestExam testExam = new TestExam();
         testExam.run();
     }
+
+    public static void testSpecie() {
+        TestSpecie testSpecie = new TestSpecie();
+        testSpecie.run();
+    }
 }
