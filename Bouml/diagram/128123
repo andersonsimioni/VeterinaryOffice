@@ -1,7 +1,7 @@
 format 222
 "univali.andersonsimioni.veterinaryOffice" // univali.andersonsimioni.veterinaryOffice
-  revision 1
-  modified_by 123 "DEBUG"
+  revision 2
+  modified_by 2 "bit"
   // class settings
   
   classdiagramsettings member_max_width 0 end
@@ -499,7 +499,7 @@ format 222
       end
 
       attribute 131195 "Species"
-	const_attribute private type class_ref 128763 // Species
+	const_attribute private type class_ref 128763 // Specie
 	stereotype "vector"
 	cpp_decl ""
 	java_decl ""
@@ -545,7 +545,7 @@ format 222
 	relation 128251 -_->
 	  a public
 	    classrelation_ref 128251 // <dependency>
-	  b parent class_ref 128763 // Species
+	  b parent class_ref 128763 // Specie
       end
 
       attribute 128635 "Name"
@@ -560,7 +560,7 @@ format 222
       end
 
       attribute 128763 "Specie"
-	const_attribute private type class_ref 128763 // Species
+	const_attribute private type class_ref 128763 // Specie
 	cpp_decl ""
 	java_decl ""
 	php_decl ""
@@ -597,14 +597,14 @@ format 222
 	  stereotype "instantiate"
 	  a public
 	    classrelation_ref 128379 // <dependency>
-	  b multiplicity "1..*" parent class_ref 128763 // Species
+	  b multiplicity "1..*" parent class_ref 128763 // Specie
       end
 
       classrelation 129275 // <directional composition>
 	relation 129275 *-->
 	  a role_name "" multiplicity "1..*" private
 	    classrelation_ref 129275 // <directional composition>
-	  b multiplicity "1" parent class_ref 128763 // Species
+	  b multiplicity "1" parent class_ref 128763 // Specie
       end
 
       classrelation 130043 // <composition>
@@ -639,7 +639,7 @@ format 222
 	  b multiplicity "1" parent class_ref 128507 // VeterinaryOffice
       end
 
-      attribute 131707 "Owner"
+      attribute 131707 "OwnerDocument"
 	private type class_ref 128379 // Client
 	cpp_decl ""
 	java_decl ""
@@ -656,9 +656,39 @@ format 222
 	    classrelation_ref 132347 // Animal (<unidirectional association>)
 	  b multiplicity "1" parent class_ref 129019 // Treatment
       end
+
+      operation 128514 "getName"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128642 "getSpecie"
+	public return_type class_ref 128763 // Specie
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128770 "getOwnerDocument"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
     end
 
-    class 128763 "Species"
+    class 128763 "Specie"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -703,9 +733,29 @@ format 222
 	    classrelation_ref 131323 // Specie (<unidirectional association>)
 	  b parent class_ref 128635 // Animal
       end
+
+      operation 128258 "getName"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128386 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
     end
 
-    class 128891 "Consult"
+    class 128891 "Consultation"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -811,28 +861,28 @@ format 222
 	relation 128507 -_->
 	  a public
 	    classrelation_ref 128507 // <dependency>
-	  b parent class_ref 128891 // Consult
+	  b parent class_ref 128891 // Consultation
       end
 
       classrelation 128763 // <dependency>
 	relation 128763 -_->
 	  a public
 	    classrelation_ref 128763 // <dependency>
-	  b parent class_ref 128891 // Consult
+	  b parent class_ref 128891 // Consultation
       end
 
       classrelation 130299 // <unidirectional association>
 	relation 130299 --->
 	  a role_name "" private
 	    classrelation_ref 130299 // <unidirectional association>
-	  b parent class_ref 128891 // Consult
+	  b parent class_ref 128891 // Consultation
       end
 
       classrelation 130427 // <unidirectional association>
 	relation 130427 --->
 	  a role_name "" multiplicity "1" private
 	    classrelation_ref 130427 // <unidirectional association>
-	  b multiplicity "1..*" parent class_ref 128891 // Consult
+	  b multiplicity "1..*" parent class_ref 128891 // Consultation
       end
 
       attribute 131067 "Ended"
@@ -857,7 +907,7 @@ format 222
       end
 
       attribute 131579 "Consults"
-	const_attribute private type class_ref 128891 // Consult
+	const_attribute private type class_ref 128891 // Consultation
 	stereotype "vector"
 	cpp_decl ""
 	java_decl ""
@@ -924,14 +974,14 @@ format 222
 	relation 128635 -_->
 	  a public
 	    classrelation_ref 128635 // <dependency>
-	  b parent class_ref 128891 // Consult
+	  b parent class_ref 128891 // Consultation
       end
 
       classrelation 128891 // <dependency>
 	relation 128891 -_->
 	  a public
 	    classrelation_ref 128891 // <dependency>
-	  b parent class_ref 128891 // Consult
+	  b parent class_ref 128891 // Consultation
       end
 
       classrelation 130683 // <composition>
@@ -964,7 +1014,27 @@ format 222
 	relation 131067 --->
 	  a role_name "Exams" multiplicity "0..*" private
 	    classrelation_ref 131579 // Exams (<unidirectional association>)
-	  b multiplicity "1" parent class_ref 128891 // Consult
+	  b multiplicity "1" parent class_ref 128891 // Consultation
+      end
+
+      operation 128002 "getName"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128130 "getDescription"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
       end
     end
   end

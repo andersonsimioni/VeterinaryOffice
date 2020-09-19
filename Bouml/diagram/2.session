@@ -1,0 +1,15 @@
+window_sizes 1366 738 320 1042 590 104
+
+diagrams
+  usecasediagram_ref 128123 // useCase
+    833 472 100 A4 0 0
+  active  classdiagram_ref 128251 // diagram
+    1042 590 90 A4 0 0
+end
+show_stereotypes
+selected operation_ref 128770 // getOwnerDocument
+open
+  class_ref 128379 // Client
+  class_ref 128635 // Animal
+end
+end
