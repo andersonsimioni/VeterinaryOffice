@@ -16,4 +16,9 @@ public class RunTests {
         TestClient testClient = new TestClient();
         testClient.run();
     }
+
+    public static void testAnimal() {
+        TestAnimal testAnimal = new TestAnimal();
+        testAnimal.run();
+    }
 }
