@@ -1,5 +1,7 @@
 package univali.andersonsimioni.unitTests;
 
+import univali.andersonsimioni.Consultation;
+
 public class RunTests {
 
     public static void testExam() {
@@ -20,5 +22,20 @@ public class RunTests {
     public static void testAnimal() {
         TestAnimal testAnimal = new TestAnimal();
         testAnimal.run();
+    }
+
+    public static void testConsultation() {
+        TestConsultation testConsultation = new TestConsultation();
+        testConsultation.run();
+    }
+
+    public static void testTreatment() {
+        TestTreatment testTreatment = new TestTreatment();
+        testTreatment.run();
+    }
+
+    public static void testVeterinary() {
+        TestVeterinary testVeterinary = new TestVeterinary();
+        testVeterinary.run();
     }
 }
