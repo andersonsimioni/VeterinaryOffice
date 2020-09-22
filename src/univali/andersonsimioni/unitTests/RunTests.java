@@ -38,4 +38,9 @@ public class RunTests {
         TestVeterinary testVeterinary = new TestVeterinary();
         testVeterinary.run();
     }
+
+    public static void testVeterinaryOffice(){
+        TestVeterinaryOffice testVeterinaryOffice = new TestVeterinaryOffice();
+        testVeterinaryOffice.run();
+    }
 }
