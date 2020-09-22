@@ -38,10 +38,9 @@ public class TestVeterinaryOffice {
         );
 
         Exam exam = new Exam("Blood test", "test blood");
-        Treatment treatment = new Treatment(animal,client);
+        Treatment treatment = new Treatment(animal,client,veterinary);
         Consultation consultation = new Consultation(
                 treatment,
-                LocalDate.of(2020,01,01),
                 LocalDate.of(2020,10,20));
 
         this.veterinaryOffice.registerVeterinary(veterinary);
@@ -50,6 +49,7 @@ public class TestVeterinaryOffice {
         this.veterinaryOffice.registerAnimal(animal);
         this.veterinaryOffice.registerTreatment(treatment);
 
+        System.out.println(veterinaryOffice.toString());
         System.out.println("Running test on VeterinaryOffice Class");
     }
 }

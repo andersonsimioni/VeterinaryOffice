@@ -22,12 +22,19 @@ public class TestTreatment {
                 "123456789"
         );
 
+        Veterinary veterinary = new Veterinary(
+                "Anderson Simioni",
+                "Anderson`s Address",
+                "99999999999",
+                "5548999999999",
+                "123456789"
+        );
+
         Consultation consultation = new Consultation(
                 treatment,
-                LocalDate.of(2020,10,18),
                 LocalDate.of(2020,10,18));
 
-        treatment = new Treatment(animal, client);
+        treatment = new Treatment(animal, client, veterinary);
 
         treatment.addConsultation(consultation);
 

@@ -21,19 +21,26 @@ public class TestConsultation {
                 "Test address",
                 "12312312"
         );
-        Treatment treatment = new Treatment(animal, client);
+
+        Veterinary veterinary = new Veterinary(
+                "Anderson simioni",
+                "Rua joaquim vaz",
+                "65419819",
+                "48656554851",
+                "1165164616");
+
+        Treatment treatment = new Treatment(animal, client, veterinary);
 
         Exam exam1 = new Exam("Exam 1", "Exam 1 description");
         Exam exam2 = new Exam("Exam 2", "Exam 2 description");
 
         this.consultation = new Consultation(
                 treatment,
-                LocalDate.of(2020,02,01),
                 LocalDate.of(2020,02,01)
         );
 
-        consultation.AddExam(exam1);
-        consultation.AddExam(exam2);
+        consultation.addExam(exam1);
+        consultation.addExam(exam2);
 
         System.out.println("Running test on Consultation Class");
         System.out.println("Consultation Create Date: " + this.consultation.getCreateDate());

@@ -1,7 +1,7 @@
 format 222
 "univali.andersonsimioni.veterinaryOffice" // univali.andersonsimioni.veterinaryOffice
-  revision 2
-  modified_by 2 "bit"
+  revision 3
+  modified_by 123 "DEBUG"
   // class settings
   
   classdiagramsettings member_max_width 0 end

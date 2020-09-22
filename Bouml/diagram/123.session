@@ -1,8 +1,8 @@
-window_sizes 1920 1013 450 1464 827 128
+window_sizes 1920 1013 450 1464 831 128
 
 diagrams
   active  classdiagram_ref 128251 // diagram
-    1464 827 110 A4 0 0
+    1464 827 139 A4 48 0
   usecasediagram_ref 128123 // useCase
     114 98 100 A4 0 0
 end

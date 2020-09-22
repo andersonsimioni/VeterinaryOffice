@@ -11,12 +11,49 @@ public class Animal {
     private final LocalDate BirthDate;
     private final String OwnerDocument;
 
-    public Animal(String name, univali.andersonsimioni.Specie specie, univali.andersonsimioni.Genre genre, LocalDate birthDate, String ownerDocument) {
-        Name = name;
-        Specie = specie;
-        Genre = genre;
-        BirthDate = birthDate;
-        OwnerDocument = ownerDocument;
+    /**
+     * Validate constructor params
+     * @param name
+     * @param specie
+     * @param genre
+     * @param birthDate
+     * @param ownerDocument
+     */
+    private void validateParams(String name, Specie specie, Genre genre, LocalDate birthDate, String ownerDocument){
+        if(name == null || name.isEmpty())
+            throw new IllegalArgumentException("name is null or empty");
+        if(specie == null)
+            throw new IllegalArgumentException("specie is null");
+        if(genre == null)
+            throw new IllegalArgumentException("genre is null");
+        if(birthDate == null)
+            throw new IllegalArgumentException("birthDate is null");
+        if(ownerDocument == null || ownerDocument.isEmpty())
+            throw new IllegalArgumentException("ownerDocument is empty or null");
+
+        Period d = Period.between(LocalDate.now(), birthDate);
+        if(d.getDays() > 0)
+            throw new IllegalArgumentException("date now is bigger than birthDate");
+    }
+
+    public Animal(String name, Specie specie, Genre genre, LocalDate birthDate, String ownerDocument) {
+        validateParams(name, specie, genre, birthDate, ownerDocument);
+
+        this.Name = name;
+        this.Specie = specie;
+        this.Genre = genre;
+        this.BirthDate = birthDate;
+        this.OwnerDocument = ownerDocument;
+    }
+
+    @Override
+    public String toString() {
+        return  "{ Name='" + Name + '\'' +
+                ", \nSpecie=" + Specie +
+                ", \nGenre=" + Genre +
+                ", \nBirthDate=" + BirthDate +
+                ", \nOwnerDocument='" + OwnerDocument + '\'' +
+                '}';
     }
 
     public Integer getAge(){
@@ -30,11 +67,11 @@ public class Animal {
         return Name;
     }
 
-    public univali.andersonsimioni.Specie getSpecie() {
+    public Specie getSpecie() {
         return Specie;
     }
 
-    public univali.andersonsimioni.Genre getGenre() {
+    public Genre getGenre() {
         return Genre;
     }
 
